@@ -1,0 +1,151 @@
+.servicesSection {
+  padding: 0;
+  background: #000;
+}
+
+.serviceItem {
+  position: relative;
+  height: 70vh;
+  min-height: 600px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.serviceBg {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.6) grayscale(20%);
+}
+
+.serviceItem:hover .serviceBg {
+  transform: scale(1.08);
+  filter: brightness(0.8) grayscale(0%);
+}
+
+.serviceOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+  z-index: 1;
+}
+
+.serviceContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 80px 60px;
+  z-index: 2;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.serviceLabel {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.serviceTitle {
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.serviceTitle strong {
+  font-weight: 700;
+}
+
+.serviceDescription {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 35px;
+}
+
+.serviceBrands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.brandBadge {
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.serviceItem:hover .serviceLink {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.serviceLink:hover {
+  background: #f0f0f0;
+  gap: 18px;
+}
+
+.serviceLink::after {
+  content: '→';
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.serviceLink:hover::after {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1200px) {
+  .serviceTitle {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 968px) {
+  .serviceContent {
+    padding: 60px 30px;
+  }
+
+  .serviceTitle {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceItem {
+    height: 60vh;
+    min-height: 500px;
+  }
+}

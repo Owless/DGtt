@@ -1,0 +1,275 @@
+.page {
+  min-height: 100vh;
+  padding-top: 90px;
+}
+
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.heroBg {
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.heroLabel {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.heroTitle {
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroTitle strong {
+  font-weight: 700;
+}
+
+.heroDescription {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+.products {
+  padding: 120px 0;
+  background: #000;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.sectionDescription {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.productCard {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.productCard:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.productImage {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.productImage img {
+  transition: transform 0.6s ease;
+}
+
+.productCard:hover .productImage img {
+  transform: scale(1.1);
+}
+
+.productContent {
+  padding: 35px;
+}
+
+.productBrand {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+}
+
+.productName {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.productDescription {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.productSpecs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spec {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.productFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productPrice {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.productBtn {
+  padding: 12px 30px;
+  background: #fff;
+  color: #000;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.productBtn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.features {
+  padding: 120px 0;
+  background: #0a0a0a;
+}
+
+.featuresTitle {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.featureCard {
+  text-align: center;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.featureIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.featureCard h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.featureCard p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .heroContent {
+    padding: 0 30px;
+  }
+
+  .heroTitle {
+    font-size: 42px;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}
